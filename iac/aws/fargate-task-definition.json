@@ -1,0 +1,39 @@
+{
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "containerDefinitions": [
+      {
+        "resourceRequirements": null,
+        "essential": true,
+        "memory": 512,
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "secretOptions": [],
+          "options": {
+            "awslogs-group": "fit-tracker-workouts-cloudwatch-log-group",
+            "awslogs-region": "eu-central-1",
+            "awslogs-stream-prefix": "ecs"
+          }
+        },
+        "portMappings": [
+          {
+            "hostPort": 80,
+            "protocol": "tcp",
+            "containerPort": 80
+          }
+        ],
+        "image": "072075398333.dkr.ecr.eu-central-1.amazonaws.com/fit-tracker-workout-registry",
+        "name": "fit-tracker-workout-container"
+      }
+    ],
+    "inferenceAccelerators": [],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::072075398333:role/ecsTaskExecutionRole",
+    "family": "fit-tracker-workout",
+    "taskRoleArn": "arn:aws:iam::072075398333:role/ecsTaskExecutionRole",
+    "placementConstraints": []
+  }
