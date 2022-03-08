@@ -17,6 +17,7 @@ export default (
       });
       exerciseServiceStatus = response.statusCode === 200 ? 'UP' : 'DOWN';
     } catch (e) {
+      fastify.log.info(e);
       exerciseServiceStatus = 'DOWN';
     }
 
