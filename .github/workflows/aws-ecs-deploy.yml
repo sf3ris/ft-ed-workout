@@ -51,6 +51,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: fit-tracker-workout-service
-          cluster: fit-tracker-ecs-cluster
+          service: WorkoutService
+          cluster: fit-tracker-app-vpc-stack-FitTrackerAppCluster-3GF6q9NRUk6G
           wait-for-service-stability: true

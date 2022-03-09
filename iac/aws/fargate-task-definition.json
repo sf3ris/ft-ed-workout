@@ -11,7 +11,7 @@
           "logDriver": "awslogs",
           "secretOptions": [],
           "options": {
-            "awslogs-group": "fit-tracker-workouts-cloudwatch-log-group",
+            "awslogs-group": "fit-tracker-workout-stack-FitTrackerWorkoutLogGroup-k0Wq40MfHN55",
             "awslogs-region": "eu-central-1",
             "awslogs-stream-prefix": "ecs"
           }
@@ -33,7 +33,7 @@
     "memory": "512",
     "cpu": "256",
     "executionRoleArn": "arn:aws:iam::072075398333:role/ecsTaskExecutionRole",
-    "family": "fit-tracker-workout",
+    "family": "fit-tracker-workout-stack-WorkoutTaskDefinitionBase-m8e7voEfb4IZ",
     "taskRoleArn": "arn:aws:iam::072075398333:role/ecsTaskExecutionRole",
     "placementConstraints": []
   }
